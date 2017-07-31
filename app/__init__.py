@@ -1,4 +1,7 @@
 # app/__init__.py
+app = Flask(__name__)
+
+import app.views
 
 from flask import Flask
 
