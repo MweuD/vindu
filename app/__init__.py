@@ -8,6 +8,6 @@ from flask import Flask
 app = Flask(__name__, instance_relative_config=True)
 
 
-from app import views
+import app.views
 # Load the config file
 
