@@ -1,11 +1,9 @@
-from flask import Flask
-from os import environ
+from app import app
+import os
 
 
 if __name__ == '__main__':
+	# Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
-
-    if port == 5000:
-        app.debug = True
-
-    app.run(host='0.0.0.0', port=port)
+    app.run(host = '0.0.0.0',port=port, debug = True)
+    
