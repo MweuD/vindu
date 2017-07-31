@@ -5,5 +5,5 @@ import os
 if __name__ == '__main__':
 	# Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='blooming-sands-23798.herokuapp.com', port=port)
+    app.run(port=port)
     
