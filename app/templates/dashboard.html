@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{% block title %}Home{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='css/animation.css')}}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <body>
+        <div class="container">
+            <ol class="breadcrumb text-right" style="margin-bottom:0px">
+                <p class="pull-left" style="color:white">Python.Com</p>
+                <li><a href="/dashboard">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign up</a></li>
+            </ol>
+        </div>
+
+        <div class="container">
+            <div class="page-header" style="margin-top:0px">
+                <img src="{{url_for('static', filename='images/index.jpeg')}}" class="img-responsive pull-right" style="width:200px; height:100px">
+                <h1 class="text-left" style="font-size:65px; color:green">Python e-Learning</h1>
+            </div>
+            <hr style="color:aqua"> {% block body %}
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Welcome to learning Python.com</h4>
+                        </div>
+                        <div class="panel-body thumbnail">
+                            <img src="{{url_for('static', filename='images/567828_67d0.jpg')}}" alt="">
+                        </div>
+                        <div class="panel-footer">
+                            <h2 class="text-center animated infinite flash" style="margin-top:0px;margin-bottom:0px">Thank you!!</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="jumbotron" style="text-align:center;">
+                        <h2>Welcome To Python Programing Platform</h2>
+                        <button type="button" class="btn btn-lg btn-success data-toggle animated infinite pulse" data-toggle="collapse" data-target="#btns"><span class="glyphicon glyphicon-off"></span> Get Started</button>
+
+                    </div>
+                    <div class="well in" id="btns" style="text-align:center;background:linear-gradient(to left, blue 0%, yellow 100%)">
+                        <a href="/signup" class="btn btn-primary btn-lg" type="button"><span class="glyphicon glyphicon-pencil"></span> Sign up</a>
+                        <a href="/login" class="btn btn-info btn-lg" type="button"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="well">
+                <p>This site is not designed as a reference manual; it’s a guide for begin- ners. The coding style sometimes goes against best practices (for example, some programs use global variables), but that’s a trade-off to make the code simpler to
+                    learn. This book is made for people to write throwaway code, so there’s not much time spent on style and elegance. Sophisticated program- ming concepts—like object-oriented programming, list comprehensions.
+                    <p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 style="background:linear-gradient(to left, aqua 0%, white 100%); text-align:center; padding:5px; border-radius:100px">Python with Kali Linux</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="{{url_for('static', filename='images/Waves.jpg')}}">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="{{url_for('static', filename='images/Waterfalls.jpg')}}">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="{{url_for('static', filename='images/Road.jpg')}}">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="{{url_for('static', filename='images/Mirror.jpg')}}">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <button type="button" class="btn btn-info">Share <span class="glyphicon glyphicon-hand-right"></span></button>
+                    <i class="fa fa-facebook fa-2x"></i>
+                    <i class="fa fa-twitter fa-2x"></i>
+                    <i class="fa fa-google fa-2x"></i>
+                    <i class="fa fa-whatsapp fa-2x"></i>
+                    <i class="fa fa-instagram fa-2x"></i>
+                </div>
+                <div class="col-md-7">
+                    <div class="blockquote-reverse">
+
+
+                        <h4>&copy; copyright 2017, all rights reserved Daniels</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock body %}
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{{url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    </body>
+
+</html>

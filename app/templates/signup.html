@@ -1,0 +1,85 @@
+{%import "bootstrap/wtf.html" as wtf%} {% block title %}{% endblock title %} {% block style %}
+<link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="{{ url_for('static', filename='css/animation.css')}}" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+{% endblock style %}{% block body %}
+<div class="container">
+    <div class="page-header" style="margin-top:0px">
+        <img src="{{url_for('static', filename='images/index.jpeg')}}" class="img-responsive pull-right" style="width:200px; height:100px">
+        <h1 class="text-left" style="font-size:65px; color:green">Python e-Learning</h1>
+    </div>
+    <hr style="color:aqua">
+    <div class="row">
+        <ol class="nav nav-tabs" style="text-align:right">
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="active"><a href="/signup">Signup</a></li>
+            <li><a href="/login">Login</a></li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="{{url_for('static', filename='images/567828_67d0.jpg')}}" alt="">
+            <div class="jumbotron" style="margin-top:25px; padding:15px">
+                <h3>Welcome to python e-Learning</h3>
+                <p>This site is not designed as a reference manual; it’s a guide for begin- ners. The coding style sometimes goes against best practices (for example, some programs use global variables), but that’s a trade-off to make the code simpler to
+                    learn. This book is made for people to write throwaway code, so there’s not much time spent on style and elegance. Sophisticated program- ming concepts—like object-oriented programming, list comprehensions. </p>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <form action="/signup" method="POST" style="width:300px;" class="animated 3s bounceIn">
+                <h3>Register Here</h3>
+                {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                <h4>{{message}}</h4>
+                {% endfor %} {% endif %} {% endwith %} {{form.hidden_tag()}} {{wtf.form_field(form.username)}}{{wtf.form_field(form.email)}}{{wtf.form_field(form.password)}}{{wtf.form_field(form.confirm)}}
+                <button type="submit" class="btn btn-success btn-lg btn-block">Register</button>
+            </form>
+            <h4>Have registered? Click <a href="/login" class="animated infinite zoomIn"> here </a> to login.</h4>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3>I found it relevant</h3>
+                </div>
+                <div class="panel-body" style="background:no-repeat; background-size:cover; background-image:url({{url_for('static', filename='images/opengraph-icon-200x200.png')}})">
+                    <ul>
+                        <li>Python for beginners</li>
+                        <li>Data types</li>
+                        <li>Data Structures</li>
+                        <li>Python modules</li>
+                        <li>Object oriented programmin</li <li>Regular expression</li>
+                        <li>Introduction to python frameworks</li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <h4>Let's begin it together</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <button type="button" class="btn btn-info">Share <span class="glyphicon glyphicon-hand-right"></span></button>
+            <i class="fa fa-facebook fa-2x"></i>
+            <i class="fa fa-twitter fa-2x"></i>
+            <i class="fa fa-google fa-2x"></i>
+            <i class="fa fa-whatsapp fa-2x"></i>
+            <i class="fa fa-instagram fa-2x"></i>
+        </div>
+        <div class="col-md-7">
+            <div class="blockquote-reverse">
+
+
+                <h4>&copy; copyright 2017, all rights reserved Daniels</h4>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock body %}

@@ -1,0 +1,87 @@
+{% extends "dashboard.html" %} {% block title %} About {% endblock title %} {% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="carousel slide" id="myCarousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{{url_for('static', filename='images/Road.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 1</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Stones.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 2</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Icescape.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 3</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Mirror.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 4</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Sandstone.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 5</div>
+                    </div>
+                </div>
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well">
+                        <div class="thumbnail">
+                            <img src="{{url_for('static', filename='images/index.jpeg')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h2 style="text-align:center; color:blue">About Python.Com</h2>
+                <p>Software is at the core of so many of the tools we use today: Nearly everyone uses social networks to communicate, many people have Internet-connected computers in their phones, and most office jobs involve interacting with a computer
+                    to get work done. As a result, the demand for people who can code has skyrocketed. Countless books, interactive web tutorials, and developer boot camps promise to turn ambitious beginners into software engineers with six-figure salaries.
+                    This site offers you a step to step tutorial on how become an expert in python software development. Click <a href="/signup" class="animated infinite fadeOut">Here</a> to signup.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="well">
+            <img src="{{url_for('static', filename='images/opengraph-icon-200x200.png')}}" class="pull-right" style="width:150px;height:200px">
+            <h2 style="color:cornflowerblue" class="animated infinite headShake">What is Python?</h2>
+
+            <p>Python refers to the Python programming language (with syntax rules for writing what is considered valid Python code) and the Python interpreter software that reads source code (written in the Python language) and per- forms its instructions.
+                The Python interpreter is free to download from http://python.org/, and there are versions for Linux, OS X, and Windows. The name Python comes from the surreal British comedy group Monty Python, not from the snake. Python programmers are
+                affectionately called Pythonistas, and both Monty Python and serpentine references usually pep- per Python tutorials and documentation.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <button type="button" class="btn btn-info">Share <span class="glyphicon glyphicon-hand-right"></span></button>
+            <i class="fa fa-facebook fa-2x"></i>
+            <i class="fa fa-twitter fa-2x"></i>
+            <i class="fa fa-google fa-2x"></i>
+            <i class="fa fa-whatsapp fa-2x"></i>
+            <i class="fa fa-instagram fa-2x"></i>
+        </div>
+        <div class="col-md-7">
+            <div class="blockquote-reverse">
+
+
+                <h4>&copy; copyright 2017, all rights reserved Daniels</h4>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock body %}

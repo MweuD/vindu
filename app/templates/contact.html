@@ -1,0 +1,82 @@
+{% extends "dashboard.html" %} {% block title %}Contact{% endblock title %} {% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3>Let's get connected</h3>
+                </div>
+                <div class="panel-body thumbnail">
+                    <img src="{{url_for('static', filename='images/567828_67d0.jpg')}}" alt="">
+                </div>
+                <div class="panel-footer">
+                    <h2 class="text-center animated infinite flash" style="margin-top:0px;margin-bottom:0px">Thank you!!</h2>
+                </div>
+            </div>
+            <div class="well" style="color:white; background:linear-gradient(to right, yellow 0%, blue 100%)">
+                <img src="{{url_for('static', filename='images/opengraph-icon-200x200.png')}}" class="pull-right" style="width:100px; height:150px">
+                <h3>Find me</h3>
+                <p><span class="glyphicon glyphicon-earphone"> +254712558812</span></p>
+                <p><span class="glyphicon glyphicon-envelope"> jeremiah.mweu@gmail.com</span></p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="carousel slide" id="myCarousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{{url_for('static', filename='images/Road.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 1</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Stones.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 2</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Icescape.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 3</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Mirror.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 4</div>
+                    </div>
+                    <div class="item">
+                        <img src="{{url_for('static', filename='images/Sandstone.jpg')}}" alt="First slide">
+                        <div class="carousel-caption">This Caption 5</div>
+                    </div>
+                </div>
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center" style="padding-top:10px; background:azure">
+                    <h3><a href="/signup" class="btn btn-lg btn-success animated infinite pulse">Sign up now!!</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <button type="button" class="btn btn-info">Share <span class="glyphicon glyphicon-hand-right"></span></button>
+            <i class="fa fa-facebook fa-2x"></i>
+            <i class="fa fa-twitter fa-2x"></i>
+            <i class="fa fa-google fa-2x"></i>
+            <i class="fa fa-whatsapp fa-2x"></i>
+            <i class="fa fa-instagram fa-2x"></i>
+        </div>
+        <div class="col-md-7">
+            <div class="blockquote-reverse">
+
+
+                <h4>&copy; copyright 2017, all rights reserved Daniels</h4>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
