@@ -9,5 +9,5 @@ if __name__ == '__main__':
     if port == 5000:
         app.debug = True
 
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='blooming-sands-23798.herokuapp.com', port=port)
      
