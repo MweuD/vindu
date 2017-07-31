@@ -11,7 +11,7 @@ import gc
 app.config['SECRET_KEY']='Ilovethis'
 Bootstrap(app)
 
-@app.route('/')
+@app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
 @app.route('/about')
