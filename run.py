@@ -1,12 +1,10 @@
 from flask import Flask
-import os
+from os import environ
 
 
 app = Flask(__name__)
 
 @app.route('/')
-def dashboard():
-    return render_template('dashboard.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
